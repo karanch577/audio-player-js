@@ -14,4 +14,4 @@ Topics learned -
 ## Time taken - 8hrs
 
 
-<img src="./images/1.gif">
+![](./images/1.gif)
