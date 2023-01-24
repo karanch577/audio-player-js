@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script defer src="./index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens: {
+              md: "500px",
+              lg: "730px"
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex min-h-screen w-screen absolute">
+        <div class="player-container flex flex-col items-center bg-indigo-100 w-[90vw] md:w-[70vw] lg:w-[50vw] h-[70vh] rounded-2xl m-auto">
+            <div class="w-[200px] h-[200px] overflow-hidden mt-14 rounded-[50%] border-2 border-purple-300">
+                <img src="" alt="song_img" class="h-full ">
+            </div>
+            <h2 class="text-3xl font-semibold mt-6" id="songName"></h2>
+            <h4 class="text-xl font-semibold m-3" id="artistName"></h4>
+            <div class="audio-player">
+              <!-- load the audio file -->
+              <audio src="" preload="metadata"></audio>
+                <div class="seek-slider flex relative">
+                  <span id="current-time" class="mx-3">0:00</span>
+                  <input type="range" id="seek-slider" value="0">
+                  <span id="duration" class="mx-3">0:00</span>
+                  <input class="absolute -right-[5.4rem] -top-20 -rotate-90 hidden transition-all" type="range" value="0" id="volume">
+                </div>
+                <div class="icons text-3xl text-center mt-2 relative">
+                  <i class="ri-skip-back-line"></i>
+                  <i class="ri-play-line"></i>
+                  <i class="ri-pause-line hidden"></i>
+                  <i class="ri-skip-forward-line"></i>
+                  <i class="ri-volume-up-line absolute -right-10 -top-10"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
